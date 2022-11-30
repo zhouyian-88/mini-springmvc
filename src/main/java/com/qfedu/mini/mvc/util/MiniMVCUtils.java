@@ -27,7 +27,7 @@ public class MiniMVCUtils {
         //使用类加载器得到url地址
         URL url = getClassLoader().getResource(basePackage.replace(".", "/"));
         String path = url.getPath();
-        System.out.println(path);
+//        System.out.println(path);
         //读取指定路径下所有的字节码文件
         loadClassSetToPath(classSet,path,basePackage);
 

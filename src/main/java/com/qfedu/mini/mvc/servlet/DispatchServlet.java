@@ -31,7 +31,7 @@ public class DispatchServlet extends HttpServlet {
     private static final String CONTEXT_CONFIG_KEY = "ContextConfigLocation";
     private static final String BASE_PACKAGE = "basePackage";
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String filePath = this.getInitParameter(CONTEXT_CONFIG_KEY);
         if(filePath.startsWith("classpath:")){
             filePath=filePath.replace("classpath:", "");//得到配置文件的名称
